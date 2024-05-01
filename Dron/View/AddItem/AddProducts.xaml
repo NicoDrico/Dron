@@ -1,0 +1,31 @@
+﻿<Window x:Class="Dron.View.AddItem.AddProducts"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Dron.ViewModel.AddViewModel"
+        mc:Ignorable="d"
+        Title="Добавить продукт" Height="400" Width="250" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="30"/>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Vertical" Margin="10,0,10,10">
+
+            <Label Content="Название"/>
+            <TextBox/>
+
+            <Label Content="Цена"/>
+            <TextBox/>
+
+            <Label Content="Категория"/>
+            <ComboBox ItemsSource="{Binding Categories}" SelectedItem="{Binding SelectedCategory}"/>
+            
+         
+
+        </StackPanel>
+
+        <Button Grid.Row="1" Content="Добавить" Command="{Binding AddProduct}" />
+    </Grid>
+</Window>

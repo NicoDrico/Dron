@@ -1,0 +1,24 @@
+﻿<Window x:Class="Dron.View.AddItem.AddCategories"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Dron.View.AddItem"
+        mc:Ignorable="d"
+        Title="Добавить категорию" Height="120" Width="310" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="30"/>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Vertical" Margin="10,0,10,10">
+
+            <Label Content="Название"/>
+            <TextBox Text="{Binding Name}"/>
+
+        </StackPanel>
+
+        <Button Grid.Row="1" Content="Добавить" Command="{Binding AddJobTitile}"/>
+
+    </Grid>
+</Window>
